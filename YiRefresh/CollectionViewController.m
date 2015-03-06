@@ -37,7 +37,12 @@
     
     
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize=CGSizeMake(100, 100);
+    if (WScreen>320) {
+        layout.itemSize=CGSizeMake(100, 100);
+    }else{
+        layout.itemSize=CGSizeMake(80, 80);
+        
+    }
     [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
     layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     UICollectionView *collectionView=[[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, WScreen, HScreen-64) collectionViewLayout:layout];
