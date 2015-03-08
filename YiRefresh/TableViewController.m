@@ -48,7 +48,7 @@
         //  后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
-            sleep(3);
+            sleep(2);
             [refreshHeader endRefreshing];
             dispatch_async(dispatch_get_main_queue(), ^{
 //               主线程刷新视图
@@ -80,7 +80,7 @@
         //  后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
 
-            sleep(3);
+            sleep(2);
   
             [refreshFooter endRefreshing];
             dispatch_async(dispatch_get_main_queue(), ^{
