@@ -30,6 +30,7 @@
     UIButton *buttonTable=[UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:buttonTable];
     buttonTable.frame=CGRectMake((WScreen-230)/2, 70, 230, 45);
+    NSLog(@"%f",WScreen);
     [buttonTable addTarget:self action:@selector(tableAction) forControlEvents:UIControlEventTouchUpInside];
     [buttonTable setTitle:@"tableView刷新演示" forState:UIControlStateNormal];
     [buttonTable setBackgroundColor:[UIColor colorWithRed:0.24f green:0.72f blue:0.17f alpha:1.00f]];

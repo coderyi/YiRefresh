@@ -108,7 +108,7 @@
         [UIView animateWithDuration:0.3 animations:^{
             [activityView stopAnimating];
             
-            _scrollView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
+            _scrollView.contentInset=UIEdgeInsetsMake(0, 0, footerHeight, 0);
             footerView.frame=CGRectMake(0, contentHeight, WScreen, footerHeight);
         }];
     });
