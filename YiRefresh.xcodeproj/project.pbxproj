@@ -18,6 +18,7 @@
 		A15702261AA88D3D00AAC433 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15702241AA88D3D00AAC433 /* LaunchScreen.xib */; };
 		A15702321AA88D3D00AAC433 /* YiRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A15702311AA88D3D00AAC433 /* YiRefreshTests.m */; };
 		A15702481AA898FB00AAC433 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A15702471AA898FB00AAC433 /* TableViewController.m */; };
+		A1650B7A1AB1C787000664AD /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1650B791AB1C787000664AD /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		A157023B1AA88D6900AAC433 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		A15702461AA898FB00AAC433 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		A15702471AA898FB00AAC433 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		A1650B781AB1C787000664AD /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		A1650B791AB1C787000664AD /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				A15702471AA898FB00AAC433 /* TableViewController.m */,
 				185B0F741AA9B293005B3657 /* CollectionViewController.h */,
 				185B0F751AA9B293005B3657 /* CollectionViewController.m */,
+				A1650B781AB1C787000664AD /* WebViewController.h */,
+				A1650B791AB1C787000664AD /* WebViewController.m */,
 				185B0F601AA99D52005B3657 /* YiRefreshHeader.h */,
 				185B0F611AA99D52005B3657 /* YiRefreshHeader.m */,
 				185B0F711AA9A6BF005B3657 /* YiRefreshFooter.h */,
@@ -244,6 +249,7 @@
 				A15702481AA898FB00AAC433 /* TableViewController.m in Sources */,
 				185B0F761AA9B293005B3657 /* CollectionViewController.m in Sources */,
 				A157021E1AA88D3D00AAC433 /* ViewController.m in Sources */,
+				A1650B7A1AB1C787000664AD /* WebViewController.m in Sources */,
 				185B0F731AA9A6BF005B3657 /* YiRefreshFooter.m in Sources */,
 				A157021B1AA88D3D00AAC433 /* AppDelegate.m in Sources */,
 				185B0F621AA99D52005B3657 /* YiRefreshHeader.m in Sources */,

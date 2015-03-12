@@ -169,6 +169,9 @@
 }
 
 
-
+-(void)dealloc{
+    [_scrollView removeObserver:self forKeyPath:@"contentOffset"];
+    
+}
 
 @end
