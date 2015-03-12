@@ -2,7 +2,7 @@
 The easiest way to use pull-to-refresh.
 
 下拉刷新，大道至简，最简单的网络刷新。
-
+采用KVO实现，应用场景可以在UITableView，UICollectionView，UIWebView等。
 YiRefresh支持iOS7+，横竖屏切换，支持iPhone和iPad。
 
 头部下拉刷新用法
