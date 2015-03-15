@@ -1,5 +1,5 @@
 # YiRefresh
-The easiest way to use pull-to-refresh.
+a simple way to use pull-to-refresh.
 
 下拉刷新，大道至简，最简单的网络刷新。
 
