@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		185B0F621AA99D52005B3657 /* YiRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F611AA99D52005B3657 /* YiRefreshHeader.m */; };
-		185B0F731AA9A6BF005B3657 /* YiRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F721AA9A6BF005B3657 /* YiRefreshFooter.m */; };
-		185B0F761AA9B293005B3657 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0F751AA9B293005B3657 /* CollectionViewController.m */; };
-		A15702181AA88D3D00AAC433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A15702171AA88D3D00AAC433 /* main.m */; };
-		A157021B1AA88D3D00AAC433 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A157021A1AA88D3D00AAC433 /* AppDelegate.m */; };
-		A157021E1AA88D3D00AAC433 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A157021D1AA88D3D00AAC433 /* ViewController.m */; };
-		A15702211AA88D3D00AAC433 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A157021F1AA88D3D00AAC433 /* Main.storyboard */; };
-		A15702231AA88D3D00AAC433 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A15702221AA88D3D00AAC433 /* Images.xcassets */; };
-		A15702261AA88D3D00AAC433 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A15702241AA88D3D00AAC433 /* LaunchScreen.xib */; };
+		0A5537EB1B3FE32900E8457B /* YiRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537E81B3FE32900E8457B /* YiRefreshFooter.m */; };
+		0A5537EC1B3FE32900E8457B /* YiRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537EA1B3FE32900E8457B /* YiRefreshHeader.m */; };
+		0A5538001B3FE33E00E8457B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537EF1B3FE33E00E8457B /* AppDelegate.m */; };
+		0A5538011B3FE33E00E8457B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5537F01B3FE33E00E8457B /* LaunchScreen.xib */; };
+		0A5538021B3FE33E00E8457B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5537F21B3FE33E00E8457B /* Main.storyboard */; };
+		0A5538031B3FE33E00E8457B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537F51B3FE33E00E8457B /* CollectionViewController.m */; };
+		0A5538041B3FE33E00E8457B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5537F71B3FE33E00E8457B /* Images.xcassets */; };
+		0A5538051B3FE33E00E8457B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A5537F81B3FE33E00E8457B /* Info.plist */; };
+		0A5538061B3FE33E00E8457B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537F91B3FE33E00E8457B /* main.m */; };
+		0A5538071B3FE33E00E8457B /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537FB1B3FE33E00E8457B /* TableViewController.m */; };
+		0A5538081B3FE33E00E8457B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537FD1B3FE33E00E8457B /* ViewController.m */; };
+		0A5538091B3FE33E00E8457B /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537FF1B3FE33E00E8457B /* WebViewController.m */; };
 		A15702321AA88D3D00AAC433 /* YiRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A15702311AA88D3D00AAC433 /* YiRefreshTests.m */; };
-		A15702481AA898FB00AAC433 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A15702471AA898FB00AAC433 /* TableViewController.m */; };
-		A1650B7A1AB1C787000664AD /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1650B791AB1C787000664AD /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,30 +33,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		185B0F601AA99D52005B3657 /* YiRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshHeader.h; sourceTree = "<group>"; };
-		185B0F611AA99D52005B3657 /* YiRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshHeader.m; sourceTree = "<group>"; };
-		185B0F711AA9A6BF005B3657 /* YiRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshFooter.h; sourceTree = "<group>"; };
-		185B0F721AA9A6BF005B3657 /* YiRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshFooter.m; sourceTree = "<group>"; };
-		185B0F741AA9B293005B3657 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
-		185B0F751AA9B293005B3657 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		0A5537E71B3FE32900E8457B /* YiRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshFooter.h; sourceTree = "<group>"; };
+		0A5537E81B3FE32900E8457B /* YiRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshFooter.m; sourceTree = "<group>"; };
+		0A5537E91B3FE32900E8457B /* YiRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshHeader.h; sourceTree = "<group>"; };
+		0A5537EA1B3FE32900E8457B /* YiRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshHeader.m; sourceTree = "<group>"; };
+		0A5537EE1B3FE33E00E8457B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0A5537EF1B3FE33E00E8457B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0A5537F11B3FE33E00E8457B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0A5537F31B3FE33E00E8457B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A5537F41B3FE33E00E8457B /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		0A5537F51B3FE33E00E8457B /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		0A5537F61B3FE33E00E8457B /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		0A5537F71B3FE33E00E8457B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0A5537F81B3FE33E00E8457B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5537F91B3FE33E00E8457B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A5537FA1B3FE33E00E8457B /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		0A5537FB1B3FE33E00E8457B /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		0A5537FC1B3FE33E00E8457B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0A5537FD1B3FE33E00E8457B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0A5537FE1B3FE33E00E8457B /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		0A5537FF1B3FE33E00E8457B /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		A15702121AA88D3D00AAC433 /* YiRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YiRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A15702161AA88D3D00AAC433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A15702171AA88D3D00AAC433 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A15702191AA88D3D00AAC433 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A157021A1AA88D3D00AAC433 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A157021C1AA88D3D00AAC433 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A157021D1AA88D3D00AAC433 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A15702201AA88D3D00AAC433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A15702221AA88D3D00AAC433 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A15702251AA88D3D00AAC433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A157022B1AA88D3D00AAC433 /* YiRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YiRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15702301AA88D3D00AAC433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15702311AA88D3D00AAC433 /* YiRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YiRefreshTests.m; sourceTree = "<group>"; };
-		A157023B1AA88D6900AAC433 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
-		A15702461AA898FB00AAC433 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		A15702471AA898FB00AAC433 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
-		A1650B781AB1C787000664AD /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		A1650B791AB1C787000664AD /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +77,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5537ED1B3FE33E00E8457B /* YiRefreshDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0A5537FC1B3FE33E00E8457B /* ViewController.h */,
+				0A5537FD1B3FE33E00E8457B /* ViewController.m */,
+				0A5537F41B3FE33E00E8457B /* CollectionViewController.h */,
+				0A5537F51B3FE33E00E8457B /* CollectionViewController.m */,
+				0A5537FA1B3FE33E00E8457B /* TableViewController.h */,
+				0A5537FB1B3FE33E00E8457B /* TableViewController.m */,
+				0A5537FE1B3FE33E00E8457B /* WebViewController.h */,
+				0A5537FF1B3FE33E00E8457B /* WebViewController.m */,
+				0A5537EE1B3FE33E00E8457B /* AppDelegate.h */,
+				0A5537EF1B3FE33E00E8457B /* AppDelegate.m */,
+				0A5537F01B3FE33E00E8457B /* LaunchScreen.xib */,
+				0A5537F71B3FE33E00E8457B /* Images.xcassets */,
+				0A5537F21B3FE33E00E8457B /* Main.storyboard */,
+				0A55380A1B3FE37F00E8457B /* Supporting Files */,
+			);
+			path = YiRefreshDemo;
+			sourceTree = "<group>";
+		};
+		0A55380A1B3FE37F00E8457B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A5537F61B3FE33E00E8457B /* Header.h */,
+				0A5537F81B3FE33E00E8457B /* Info.plist */,
+				0A5537F91B3FE33E00E8457B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A15702091AA88D3D00AAC433 = {
 			isa = PBXGroup;
 			children = (
 				A15702141AA88D3D00AAC433 /* YiRefresh */,
+				0A5537ED1B3FE33E00E8457B /* YiRefreshDemo */,
 				A157022E1AA88D3D00AAC433 /* YiRefreshTests */,
 				A15702131AA88D3D00AAC433 /* Products */,
 			);
@@ -97,36 +130,12 @@
 		A15702141AA88D3D00AAC433 /* YiRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				A15702191AA88D3D00AAC433 /* AppDelegate.h */,
-				A157021A1AA88D3D00AAC433 /* AppDelegate.m */,
-				A157021C1AA88D3D00AAC433 /* ViewController.h */,
-				A157021D1AA88D3D00AAC433 /* ViewController.m */,
-				A15702461AA898FB00AAC433 /* TableViewController.h */,
-				A15702471AA898FB00AAC433 /* TableViewController.m */,
-				185B0F741AA9B293005B3657 /* CollectionViewController.h */,
-				185B0F751AA9B293005B3657 /* CollectionViewController.m */,
-				A1650B781AB1C787000664AD /* WebViewController.h */,
-				A1650B791AB1C787000664AD /* WebViewController.m */,
-				185B0F601AA99D52005B3657 /* YiRefreshHeader.h */,
-				185B0F611AA99D52005B3657 /* YiRefreshHeader.m */,
-				185B0F711AA9A6BF005B3657 /* YiRefreshFooter.h */,
-				185B0F721AA9A6BF005B3657 /* YiRefreshFooter.m */,
-				A157021F1AA88D3D00AAC433 /* Main.storyboard */,
-				A15702221AA88D3D00AAC433 /* Images.xcassets */,
-				A15702241AA88D3D00AAC433 /* LaunchScreen.xib */,
-				A15702151AA88D3D00AAC433 /* Supporting Files */,
+				0A5537E91B3FE32900E8457B /* YiRefreshHeader.h */,
+				0A5537EA1B3FE32900E8457B /* YiRefreshHeader.m */,
+				0A5537E71B3FE32900E8457B /* YiRefreshFooter.h */,
+				0A5537E81B3FE32900E8457B /* YiRefreshFooter.m */,
 			);
 			path = YiRefresh;
-			sourceTree = "<group>";
-		};
-		A15702151AA88D3D00AAC433 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A15702161AA88D3D00AAC433 /* Info.plist */,
-				A15702171AA88D3D00AAC433 /* main.m */,
-				A157023B1AA88D6900AAC433 /* Header.h */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A157022E1AA88D3D00AAC433 /* YiRefreshTests */ = {
@@ -226,9 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A15702211AA88D3D00AAC433 /* Main.storyboard in Resources */,
-				A15702261AA88D3D00AAC433 /* LaunchScreen.xib in Resources */,
-				A15702231AA88D3D00AAC433 /* Images.xcassets in Resources */,
+				0A5538051B3FE33E00E8457B /* Info.plist in Resources */,
+				0A5538041B3FE33E00E8457B /* Images.xcassets in Resources */,
+				0A5538011B3FE33E00E8457B /* LaunchScreen.xib in Resources */,
+				0A5538021B3FE33E00E8457B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,14 +256,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A15702481AA898FB00AAC433 /* TableViewController.m in Sources */,
-				185B0F761AA9B293005B3657 /* CollectionViewController.m in Sources */,
-				A157021E1AA88D3D00AAC433 /* ViewController.m in Sources */,
-				A1650B7A1AB1C787000664AD /* WebViewController.m in Sources */,
-				185B0F731AA9A6BF005B3657 /* YiRefreshFooter.m in Sources */,
-				A157021B1AA88D3D00AAC433 /* AppDelegate.m in Sources */,
-				185B0F621AA99D52005B3657 /* YiRefreshHeader.m in Sources */,
-				A15702181AA88D3D00AAC433 /* main.m in Sources */,
+				0A5538081B3FE33E00E8457B /* ViewController.m in Sources */,
+				0A5538061B3FE33E00E8457B /* main.m in Sources */,
+				0A5538071B3FE33E00E8457B /* TableViewController.m in Sources */,
+				0A5538091B3FE33E00E8457B /* WebViewController.m in Sources */,
+				0A5538031B3FE33E00E8457B /* CollectionViewController.m in Sources */,
+				0A5537EC1B3FE32900E8457B /* YiRefreshHeader.m in Sources */,
+				0A5537EB1B3FE32900E8457B /* YiRefreshFooter.m in Sources */,
+				0A5538001B3FE33E00E8457B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,20 +286,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A157021F1AA88D3D00AAC433 /* Main.storyboard */ = {
+		0A5537F01B3FE33E00E8457B /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A15702201AA88D3D00AAC433 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A15702241AA88D3D00AAC433 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A15702251AA88D3D00AAC433 /* Base */,
+				0A5537F11B3FE33E00E8457B /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		0A5537F21B3FE33E00E8457B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A5537F31B3FE33E00E8457B /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -376,8 +386,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = YiRefresh/Header.h;
-				INFOPLIST_FILE = YiRefresh/Info.plist;
+				GCC_PREFIX_HEADER = YiRefreshDemo/Header.h;
+				INFOPLIST_FILE = YiRefreshDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -390,8 +400,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = YiRefresh/Header.h;
-				INFOPLIST_FILE = YiRefresh/Info.plist;
+				GCC_PREFIX_HEADER = YiRefreshDemo/Header.h;
+				INFOPLIST_FILE = YiRefreshDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
