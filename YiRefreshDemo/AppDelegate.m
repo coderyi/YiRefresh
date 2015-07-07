@@ -23,6 +23,7 @@
     nav.navigationBar.barTintColor=[UIColor colorWithRed:0.22f green:0.50f blue:0.78f alpha:1.00f];
     nav.navigationBar.tintColor=[UIColor whiteColor];
     nav.navigationBar.titleTextAttributes=[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:UITextAttributeTextColor];
+    
     return YES;
 }
 

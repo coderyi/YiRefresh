@@ -17,6 +17,7 @@
 @end
 @implementation WebViewController
 
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,9 +44,10 @@
     refreshHeader.scrollView=webView.scrollView;
     
     [refreshHeader header];
+    __block UIWebView *webView1=webView;
     refreshHeader.beginRefreshingBlock=^(){
 
-        [webView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.coderyi.com/"]]];
+        [webView1 loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.coderyi.com/"]]];
 
 
     };
@@ -54,17 +56,18 @@
     
     
 }
+
+#pragma mark - UIWebViewDelegate
+
 - (void)webViewDidStartLoad:(UIWebView *)webView{
 
 }
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
- [refreshHeader endRefreshing];
+    [refreshHeader endRefreshing];
 
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-     [refreshHeader endRefreshing];
-
-
+    [refreshHeader endRefreshing];
 
 }
 @end

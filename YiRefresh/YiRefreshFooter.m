@@ -26,7 +26,7 @@
 @end
 @implementation YiRefreshFooter
 
--(void)footer{
+- (void)footer{
 
     scrollWidth=_scrollView.frame.size.width;
     footerHeight=35;
@@ -80,7 +80,7 @@
     
 }
 //开始刷新操作  如果正在刷新则不做操作
--(void)beginRefreshing{
+- (void)beginRefreshing{
     if (!isRefresh) {
         isRefresh=YES;
         [activityView startAnimating];
@@ -99,7 +99,7 @@
 
 }
 //关闭刷新操作
--(void)endRefreshing{
+- (void)endRefreshing{
      isRefresh=NO;
     
   
@@ -107,14 +107,21 @@
         
         [UIView animateWithDuration:0.3 animations:^{
             [activityView stopAnimating];
-            
-            _scrollView.contentInset=UIEdgeInsetsMake(0, 0, footerHeight, 0);
+           
+            [self heightForContentBreakView];
+            _scrollView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
             footerView.frame=CGRectMake(0, contentHeight, WScreen, footerHeight);
         }];
     });
 }
-
--(void)dealloc{
+- (CGFloat)heightForContentBreakView
+{
+    CGFloat h = self.scrollView.frame.size.height - _scrollView.contentInset.bottom - self.scrollView.contentInset.top;
+     NSLog(@"woaini a %f b %f c %f d %f",self.scrollView.frame.size.height,self.scrollView.contentSize.height,_scrollView.contentInset.bottom,_scrollView.contentInset.top);
+    return self.scrollView.contentSize.height - h;
+//    mei 504.000000 b 704.000000 c 35.000000 d 0.000000
+}
+- (void)dealloc{
     [_scrollView removeObserver:self forKeyPath:@"contentOffset"];
     
 }

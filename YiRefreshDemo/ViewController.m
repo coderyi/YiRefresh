@@ -16,6 +16,7 @@
 @end
 
 @implementation ViewController
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,6 +61,12 @@
     
     
 }
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+#pragma mark - Actions
+
 -(void)tableAction{
     TableViewController *table=[[TableViewController alloc] init];
     [self.navigationController pushViewController:table animated:YES];
@@ -78,9 +85,5 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end

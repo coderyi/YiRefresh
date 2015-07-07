@@ -25,7 +25,7 @@
 
 @end
 @implementation YiRefreshHeader
--(void)header{
+- (void)header{
     isRefresh=NO;
     lastPosition=0;
     headerHeight=35;
@@ -131,7 +131,7 @@
 }
 
 //开始刷新操作  如果正在刷新则不做操作
--(void)beginRefreshing{
+- (void)beginRefreshing{
     if (!isRefresh) {
         
         isRefresh=YES;
@@ -153,7 +153,7 @@
 
 //关闭刷新操作
 
--(void)endRefreshing{
+- (void)endRefreshing{
     isRefresh=NO;
 
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -169,7 +169,7 @@
 }
 
 
--(void)dealloc{
+- (void)dealloc{
     [_scrollView removeObserver:self forKeyPath:@"contentOffset"];
     
 }

@@ -11,8 +11,8 @@
 
 typedef void (^BeginRefreshingBlock)(void);
 @interface YiRefreshFooter : NSObject
-@property UIScrollView *scrollView;
-@property (nonatomic, copy) BeginRefreshingBlock beginRefreshingBlock;
+@property(nonatomic,strong) UIScrollView *scrollView;
+@property(nonatomic,copy) BeginRefreshingBlock beginRefreshingBlock;
 
 
 -(void)footer;

@@ -19,6 +19,7 @@
 @end
 
 @implementation TableViewController
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +30,7 @@
     }
     self.title=@"tableView刷新演示";
     self.view.backgroundColor=[UIColor whiteColor];
-    
+    self.automaticallyAdjustsScrollViewInsets=NO;
     
     UITableView *tableView=[[UITableView alloc] initWithFrame:CGRectMake(0, 0, WScreen, HScreen-64) style:UITableViewStylePlain];
     [self.view addSubview:tableView];
@@ -43,19 +44,20 @@
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=tableView;
     [refreshHeader header];
+    
     refreshHeader.beginRefreshingBlock=^(){
      
         //  后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
             sleep(2);
-            [refreshHeader endRefreshing];
+            
             dispatch_async(dispatch_get_main_queue(), ^{
 //               主线程刷新视图
                 total=16;
                 [tableView reloadData];
             });
-           
+           [refreshHeader endRefreshing];
         });
        
     };
@@ -81,21 +83,26 @@
 
             sleep(2);
   
-            [refreshFooter endRefreshing];
+            
             dispatch_async(dispatch_get_main_queue(), ^{
         //               主线程刷新视图
-                total=total+16;
+//                total=total+16;
                 [tableView reloadData];
             });
-            
+            [refreshFooter endRefreshing];
         });
         
     };
     
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 
+#pragma mark - UITableViewDataSource
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -113,19 +120,7 @@
     
     return cell;
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

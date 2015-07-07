@@ -20,6 +20,7 @@
 
 @end
 @implementation CollectionViewController
+#pragma mark - Lifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -69,14 +70,14 @@
        
             sleep(2);
        
-            [refreshHeader endRefreshing];
+           
             dispatch_async(dispatch_get_main_queue(), ^{
                 //               主线程刷新视图
 
-                                                total=17;
+                total=17;
                 [collectionView reloadData];
             });
-            
+             [refreshHeader endRefreshing];
         });
         
     };
@@ -95,20 +96,20 @@
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             sleep(2);
           
-            [refreshFooter endRefreshing];
+            
             dispatch_async(dispatch_get_main_queue(), ^{
                 //               主线程刷新视图
-                                total=total+17;
+                total=total+17;
                 [collectionView reloadData];
             });
-            
+            [refreshFooter endRefreshing];
         });
         
     };
     
 
 }
-#pragma mark collectionView
+#pragma mark - UICollectionViewDataSource
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return total;
 }
