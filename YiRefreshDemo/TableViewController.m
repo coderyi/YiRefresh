@@ -84,7 +84,7 @@
   
             [refreshFooter endRefreshing];
             dispatch_async(dispatch_get_main_queue(), ^{
-                //               主线程刷新视图
+        //               主线程刷新视图
                 total=total+16;
                 [tableView reloadData];
             });
