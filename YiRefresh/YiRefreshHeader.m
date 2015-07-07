@@ -13,7 +13,7 @@
     
     float contentHeight;
     float headerHeight;
-    BOOL isRefresh;
+    BOOL isRefresh;//是否正在刷新,默认是NO
     
     
     UILabel *headerLabel;
@@ -64,31 +64,34 @@
     headerIV.hidden=NO;
 
     
-//    为_scrollView设置KVO的观察者对象，keyPath为contentOffset属性
+    // 为_scrollView设置KVO的观察者对象，keyPath为contentOffset属性
     [_scrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
     
     
     
 }
 
-//当属性的值发生变化时，自动调用此方法
+
+/**
+ *  当属性的值发生变化时，自动调用此方法
+ */
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (![@"contentOffset" isEqualToString:keyPath]) return;
-//    获取_scrollView的contentSize
+    // 获取_scrollView的contentSize
     contentHeight=_scrollView.contentSize.height;
 
-//    判断是否在拖动_scrollView
+    // 判断是否在拖动_scrollView
     if (_scrollView.dragging) {
    
         int currentPostion = _scrollView.contentOffset.y;
-//        判断是否正在刷新  否则不做任何操作
+        // 判断是否正在刷新  否则不做任何操作
         if (!isRefresh) {
             [UIView animateWithDuration:0.3 animations:^{
                 
                 
                 
-//                当currentPostion 小于某个值时 变换状态
+                // 当currentPostion 小于某个值时 变换状态
                 if (currentPostion<-headerHeight*1.5) {
                     
                     headerLabel.text=@"松开以刷新";
@@ -98,7 +101,7 @@
                     
                     
                     int currentPostion = _scrollView.contentOffset.y;
-//                    判断滑动方向 以让“松开以刷新”变回“下拉可刷新”状态
+                    // 判断滑动方向 以让“松开以刷新”变回“下拉可刷新”状态
                     if (currentPostion - lastPosition > 5) {
                         lastPosition = currentPostion;
                         headerIV.transform = CGAffineTransformMakeRotation(M_PI*2);
@@ -119,7 +122,7 @@
         
     }else{
         
-//        进入刷新状态
+        // 进入刷新状态
         if ([headerLabel.text isEqualToString:@"松开以刷新"]) {
             [self beginRefreshing];
         }
@@ -130,7 +133,10 @@
     
 }
 
-//开始刷新操作  如果正在刷新则不做操作
+
+/**
+ *  开始刷新操作  如果正在刷新则不做操作
+ */
 - (void)beginRefreshing{
     if (!isRefresh) {
         
@@ -140,19 +146,21 @@
         activityView.hidden=NO;
         [activityView startAnimating];
         
-//        设置刷新状态_scrollView的位置
+        // 设置刷新状态_scrollView的位置
         [UIView animateWithDuration:0.3 animations:^{
             _scrollView.contentInset=UIEdgeInsetsMake(headerHeight*1.5, 0, 0, 0);
         }];
         
-//        block回调
+        // block回调
         _beginRefreshingBlock();
     }
 
 }
 
-//关闭刷新操作
 
+/**
+ *  关闭刷新操作  请加在UIScrollView数据刷新后，如[tableView reloadData];
+ */
 - (void)endRefreshing{
     isRefresh=NO;
 

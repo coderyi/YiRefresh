@@ -22,35 +22,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if (iOS7) {
+    if ([[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0) {
         self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;
         
     }
     
     self.title=@"webView刷新演示";
     self.view.backgroundColor=[UIColor whiteColor];
-
     self.automaticallyAdjustsScrollViewInsets=NO;
     
-    webView=[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, WScreen, HScreen-64)];
+    webView=[[UIWebView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height-64)];
     [self.view addSubview:webView];
     webView.delegate=self;
 
     
     
     
-    //    YiRefreshHeader  头部刷新按钮的使用
+    // YiRefreshHeader  头部刷新按钮的使用
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=webView.scrollView;
-    
     [refreshHeader header];
-    __block UIWebView *webView1=webView;
     refreshHeader.beginRefreshingBlock=^(){
-
-        [webView1 loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.coderyi.com/"]]];
-
-
+        [webView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.coderyi.com/"]]];
     };
+    
     [refreshHeader beginRefreshing];
     
     

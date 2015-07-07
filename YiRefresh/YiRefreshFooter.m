@@ -15,8 +15,8 @@
     float scrollFrameHeight;
     float footerHeight;
     float scrollWidth;
-    BOOL isAdd;
-    BOOL isRefresh;
+    BOOL isAdd;//是否添加了footer,默认是NO
+    BOOL isRefresh;//是否正在刷新,默认是NO
     
     
     UIView *footerView;
@@ -68,7 +68,7 @@
     int currentPostion = _scrollView.contentOffset.y;
     
    
-//        进入刷新状态
+    // 进入刷新状态
     if ((currentPostion>(contentHeight-scrollFrameHeight))&&(contentHeight>scrollFrameHeight)) {
         
         [self beginRefreshing];
@@ -79,7 +79,10 @@
     
     
 }
-//开始刷新操作  如果正在刷新则不做操作
+
+/**
+ *  开始刷新操作  如果正在刷新则不做操作
+ */
 - (void)beginRefreshing{
     if (!isRefresh) {
         isRefresh=YES;
@@ -98,7 +101,10 @@
     }
 
 }
-//关闭刷新操作
+
+/**
+ *  关闭刷新操作  请加在UIScrollView数据刷新后，如[tableView reloadData];
+ */
 - (void)endRefreshing{
      isRefresh=NO;
     
@@ -108,19 +114,12 @@
         [UIView animateWithDuration:0.3 animations:^{
             [activityView stopAnimating];
            
-            [self heightForContentBreakView];
             _scrollView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
-            footerView.frame=CGRectMake(0, contentHeight, WScreen, footerHeight);
+            footerView.frame=CGRectMake(0, contentHeight, [[UIScreen mainScreen] bounds].size.width, footerHeight);
         }];
     });
 }
-- (CGFloat)heightForContentBreakView
-{
-    CGFloat h = self.scrollView.frame.size.height - _scrollView.contentInset.bottom - self.scrollView.contentInset.top;
-     NSLog(@"woaini a %f b %f c %f d %f",self.scrollView.frame.size.height,self.scrollView.contentSize.height,_scrollView.contentInset.bottom,_scrollView.contentInset.top);
-    return self.scrollView.contentSize.height - h;
-//    mei 504.000000 b 704.000000 c 35.000000 d 0.000000
-}
+
 - (void)dealloc{
     [_scrollView removeObserver:self forKeyPath:@"contentOffset"];
     

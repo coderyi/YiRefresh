@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F6266CE7-ED9A-4B17-A341-593C339E8091</string>
 	<key>IDESourceControlProjectName</key>
-	<string>YiRefresh</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7E7D958493D0A9884EBD84C2AF030A707C7EBBF2</key>
 		<string>https://github.com/coderyi/YiRefresh.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>YiRefresh.xcodeproj</string>
+	<string>YiRefresh.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7E7D958493D0A9884EBD84C2AF030A707C7EBBF2</key>
