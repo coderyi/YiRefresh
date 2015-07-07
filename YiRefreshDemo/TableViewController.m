@@ -68,8 +68,7 @@
     
     
     
-    
-    
+
     
 //    YiRefreshFooter  底部刷新按钮的使用
     
