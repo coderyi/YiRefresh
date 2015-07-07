@@ -67,8 +67,9 @@
                 // 主线程刷新视图
                 total=17;
                 [collectionView reloadData];
+                [refreshHeader endRefreshing];
             });
-             [refreshHeader endRefreshing];
+            
         });
         
     };
@@ -89,8 +90,9 @@
                 // 主线程刷新视图
                 total=total+17;
                 [collectionView reloadData];
+                [refreshFooter endRefreshing];
             });
-            [refreshFooter endRefreshing];
+            
         });
         
     };

@@ -51,8 +51,9 @@
                 // 主线程刷新视图
                 total=16;
                 [tableView reloadData];
+                [refreshHeader endRefreshing];
             });
-           [refreshHeader endRefreshing];
+           
         });
        
     };
@@ -79,8 +80,9 @@
                 // 主线程刷新视图
                 total=total+16;
                 [tableView reloadData];
+                [refreshFooter endRefreshing];
             });
-            [refreshFooter endRefreshing];
+            
         });
         
     };
