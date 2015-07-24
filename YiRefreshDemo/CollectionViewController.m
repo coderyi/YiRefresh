@@ -88,7 +88,7 @@
             sleep(2);
             dispatch_async(dispatch_get_main_queue(), ^{
                 // 主线程刷新视图
-                total=total+17;
+                total=total;
                 [collectionView reloadData];
                 [refreshFooter endRefreshing];
             });
