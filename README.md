@@ -32,3 +32,7 @@ YiRefresh支持iOS7+，横竖屏切换，支持iPhone和iPad。
 ![YiRefresh](http://7u2k5i.com1.z0.glb.clouddn.com/github_yirefreshcollection1.gif?imageMogr2/thumbnail/!50p) 
 ![YiRefresh](http://7u2k5i.com1.z0.glb.clouddn.com/github_yirefreshcollection2.gif?imageMogr2/thumbnail/!50p) 
 
+
+copyright (c) 2015 coderyi.all rights reserved.
+
+
