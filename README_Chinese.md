@@ -1,14 +1,13 @@
 # YiRefresh
-
-[中文README](https://github.com/coderyi/YiRefresh/blob/master/README_Chinese.md)
-
 a simple way to use pull-to-refresh.
 
-implement by KVO,support UITableView，UICollectionView，UIWebView.
+下拉刷新，大道至简，最简单的网络刷新。
 
-YiRefresh Support iOS7+，horizontal and vertical screen，iPhone and iPad.
+采用KVO实现，应用场景可以在UITableView，UICollectionView，UIWebView等。
 
-header drop down to refresh
+YiRefresh支持iOS7+，横竖屏切换，支持iPhone和iPad。
+
+头部下拉刷新用法
 
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=tableView;
@@ -17,7 +16,7 @@ header drop down to refresh
     };
     [refreshHeader beginRefreshing];
     
-footer pull up to refresh
+底部自动上拉刷新用法
 
     refreshFooter=[[YiRefreshFooter alloc] init];
     refreshFooter.scrollView=tableView;
