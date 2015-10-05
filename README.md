@@ -8,6 +8,8 @@ implement by KVO,support UITableView，UICollectionView，UIWebView.
 
 YiRefresh Support iOS7+，horizontal and vertical screen，iPhone and iPad.
 
+- [Who Uses YiRefresh](https://github.com/coderyi/YiRefresh/wiki/Who-Uses-YiRefresh)
+
 header drop down to refresh
 
     refreshHeader=[[YiRefreshHeader alloc] init];
