@@ -1,4 +1,7 @@
 # YiRefresh
+[![Pod Version](http://img.shields.io/cocoapods/v/YiRefresh.svg?style=flat)](http://cocoadocs.org/docsets/YiRefresh/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/YiRefresh.svg?style=flat)](http://cocoadocs.org/docsets/YiRefresh/)
+[![Pod License](http://img.shields.io/cocoapods/l/YiRefresh.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 [中文README](https://github.com/coderyi/YiRefresh/blob/master/README_Chinese.md)
 
@@ -7,6 +10,13 @@ a simple way to use pull-to-refresh.
 implement by KVO,support UITableView，UICollectionView，UIWebView.
 
 YiRefresh Support iOS7+，horizontal and vertical screen，iPhone and iPad.
+
+#### Podfile
+
+```ruby
+platform :ios, '7.0'
+pod "YiRefresh", "~> 0.9.2"
+```
 
 - [Who Uses YiRefresh](https://github.com/coderyi/YiRefresh/wiki/Who-Uses-YiRefresh)
 
