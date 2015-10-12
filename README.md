@@ -15,7 +15,7 @@ YiRefresh Support iOS7+，horizontal and vertical screen，iPhone and iPad.
 
 ```ruby
 platform :ios, '7.0'
-pod "YiRefresh", "~> 0.9.2"
+pod "YiRefresh", "~> 0.9.3"
 ```
 
 - [Who Uses YiRefresh](https://github.com/coderyi/YiRefresh/wiki/Who-Uses-YiRefresh)

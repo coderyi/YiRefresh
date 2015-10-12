@@ -15,7 +15,7 @@ YiRefresh支持iOS7+，横竖屏切换，支持iPhone和iPad。
 
 ```ruby
 platform :ios, '7.0'
-pod "YiRefresh", "~> 0.9.2"
+pod "YiRefresh", "~> 0.9.3"
 ```
 
 头部下拉刷新用法
