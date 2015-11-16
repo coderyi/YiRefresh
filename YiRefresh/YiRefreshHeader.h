@@ -14,6 +14,9 @@
 
 typedef void (^BeginRefreshingBlock)(void);
 
+#define kRefreshHeaderTitleLoading @"正在载入…"
+#define kRefreshHeaderTitlePullDown @"下拉可刷新"
+#define kRefreshHeaderTitleRelease @"松开以刷新"
 
 
 @interface YiRefreshHeader : NSObject

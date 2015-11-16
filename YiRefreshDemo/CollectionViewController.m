@@ -58,16 +58,19 @@
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=collectionView;
     [refreshHeader header];
-    
+    typeof(refreshHeader) __weak weakRefreshHeader = refreshHeader;
+
     refreshHeader.beginRefreshingBlock=^(){
         // 后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             sleep(2);
             dispatch_async(dispatch_get_main_queue(), ^{
+                typeof(weakRefreshHeader) __strong strongRefreshHeader = weakRefreshHeader;
+
                 // 主线程刷新视图
                 total=17;
                 [collectionView reloadData];
-                [refreshHeader endRefreshing];
+                [strongRefreshHeader endRefreshing];
             });
             
         });
@@ -78,7 +81,8 @@
     
     
     // YiRefreshFooter  底部刷新按钮的使用
-    
+    typeof(refreshFooter) __weak weakRefreshFooter = refreshFooter;
+
     refreshFooter=[[YiRefreshFooter alloc] init];
     refreshFooter.scrollView=collectionView;
     [refreshFooter footer];
@@ -87,10 +91,12 @@
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             sleep(2);
             dispatch_async(dispatch_get_main_queue(), ^{
+                typeof(weakRefreshFooter) __strong strongRefreshFooter = weakRefreshFooter;
+
                 // 主线程刷新视图
-                total=total;
+//                total=total;
                 [collectionView reloadData];
-                [refreshFooter endRefreshing];
+                [strongRefreshFooter endRefreshing];
             });
             
         });

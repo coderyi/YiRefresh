@@ -42,8 +42,10 @@
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=webView.scrollView;
     [refreshHeader header];
+    typeof(webView) __weak weakWebView = webView;
     refreshHeader.beginRefreshingBlock=^(){
-        [webView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.coderyi.com/"]]];
+        typeof(weakWebView) __strong strongWebView = weakWebView;
+        [strongWebView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.coderyi.com/"]]];
     };
     
     [refreshHeader beginRefreshing];

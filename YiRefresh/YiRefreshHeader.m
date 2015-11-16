@@ -48,7 +48,7 @@
     headerLabel=[[UILabel alloc] initWithFrame:CGRectMake((scrollWidth-labelWidth)/2, 0, labelWidth, labelHeight)];
     [headerView addSubview:headerLabel];
     headerLabel.textAlignment=NSTextAlignmentCenter;
-    headerLabel.text=@"下拉可刷新";
+    headerLabel.text=kRefreshHeaderTitlePullDown;
     headerLabel.font=[UIFont systemFontOfSize:14];
     
     
@@ -97,7 +97,7 @@
                 // 当currentPostion 小于某个值时 变换状态
                 if (currentPostion<-headerHeight*1.5) {
                     
-                    headerLabel.text=@"松开以刷新";
+                    headerLabel.text=kRefreshHeaderTitleRelease;
                     headerIV.transform = CGAffineTransformMakeRotation(M_PI);
                     
                 }else{
@@ -109,7 +109,7 @@
                         lastPosition = currentPostion;
                         headerIV.transform = CGAffineTransformMakeRotation(M_PI*2);
                         
-                        headerLabel.text=@"下拉可刷新";
+                        headerLabel.text=kRefreshHeaderTitlePullDown;
                     }else if (lastPosition - currentPostion > 5)
                     {
                         lastPosition = currentPostion;
@@ -126,7 +126,7 @@
     }else{
         
         // 进入刷新状态
-        if ([headerLabel.text isEqualToString:@"松开以刷新"]) {
+        if ([headerLabel.text isEqualToString:kRefreshHeaderTitleRelease]) {
             [self beginRefreshing];
         }
         
@@ -144,7 +144,7 @@
     if (!isRefresh) {
         
         isRefresh=YES;
-        headerLabel.text=@"正在载入…";
+        headerLabel.text=kRefreshHeaderTitleLoading;
         headerIV.hidden=YES;
         activityView.hidden=NO;
         [activityView startAnimating];
@@ -179,7 +179,7 @@
             if (point.y!=0) {
                 _scrollView.contentOffset=CGPointMake(0, point.y+headerHeight*1.5);
             }
-            headerLabel.text=@"下拉可刷新";
+            headerLabel.text=kRefreshHeaderTitlePullDown;
             _scrollView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
             headerIV.hidden=NO;
             headerIV.transform = CGAffineTransformMakeRotation(M_PI*2);
