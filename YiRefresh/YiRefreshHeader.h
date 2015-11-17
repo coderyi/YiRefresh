@@ -23,22 +23,27 @@ typedef void (^BeginRefreshingBlock)(void);
 @property(nonatomic,strong) UIScrollView *scrollView;
 
 /**
- *  正在刷新的回调
+ *  callback when refreshing
  */
 @property(nonatomic,copy) BeginRefreshingBlock beginRefreshingBlock;
 
+@property(nonatomic,copy) NSString *titleLoading;// YiRefresh header loading title
+@property(nonatomic,copy) NSString *titlePullDown;//YiRefresh header pull down title
+@property(nonatomic,copy) NSString *titleRelease;//YiRefresh header release title
+
+
 /**
- *  header的初始化
+ *  header's init
  */
 -(void)header;
 
 /**
- *  开始刷新操作  如果正在刷新则不做操作
+ *  begin refresh
  */
 -(void)beginRefreshing;
 
 /**
- *  关闭刷新操作  请加在UIScrollView数据刷新后，如[tableView reloadData];
+ *  end refresh  
  */
 -(void)endRefreshing;
 

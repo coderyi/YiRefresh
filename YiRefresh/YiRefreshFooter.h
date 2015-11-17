@@ -17,23 +17,23 @@ typedef void (^BeginRefreshingBlock)(void);
 @property(nonatomic,strong) UIScrollView *scrollView;
 
 /**
- *  正在刷新的回调
+ *  callback when refreshing
  */
 @property(nonatomic,copy) BeginRefreshingBlock beginRefreshingBlock;
 
 
 /**
- *  footer的初始化
+ *  footer's init
  */
 -(void)footer;
 
 /**
- *  开始刷新操作  如果正在刷新则不做操作
+ *  begin refresh
  */
 -(void)beginRefreshing;
 
 /**
- *  关闭刷新操作  请加在UIScrollView数据刷新后，如[tableView reloadData];
+ *  end refresh
  */
 -(void)endRefreshing;
 

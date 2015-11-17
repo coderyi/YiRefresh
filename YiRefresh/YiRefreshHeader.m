@@ -28,6 +28,18 @@
 
 @end
 @implementation YiRefreshHeader
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        _titleLoading=kRefreshHeaderTitleLoading;
+        _titlePullDown=kRefreshHeaderTitlePullDown;
+        _titleRelease=kRefreshHeaderTitleRelease;
+    }
+    return self;
+}
+
 - (void)header{
     isRefresh=NO;
     lastPosition=0;
@@ -48,7 +60,7 @@
     headerLabel=[[UILabel alloc] initWithFrame:CGRectMake((scrollWidth-labelWidth)/2, 0, labelWidth, labelHeight)];
     [headerView addSubview:headerLabel];
     headerLabel.textAlignment=NSTextAlignmentCenter;
-    headerLabel.text=kRefreshHeaderTitlePullDown;
+    headerLabel.text=_titlePullDown;
     headerLabel.font=[UIFont systemFontOfSize:14];
     
     
@@ -97,7 +109,7 @@
                 // 当currentPostion 小于某个值时 变换状态
                 if (currentPostion<-headerHeight*1.5) {
                     
-                    headerLabel.text=kRefreshHeaderTitleRelease;
+                    headerLabel.text=_titleRelease;
                     headerIV.transform = CGAffineTransformMakeRotation(M_PI);
                     
                 }else{
@@ -109,7 +121,7 @@
                         lastPosition = currentPostion;
                         headerIV.transform = CGAffineTransformMakeRotation(M_PI*2);
                         
-                        headerLabel.text=kRefreshHeaderTitlePullDown;
+                        headerLabel.text=_titlePullDown;
                     }else if (lastPosition - currentPostion > 5)
                     {
                         lastPosition = currentPostion;
@@ -126,7 +138,7 @@
     }else{
         
         // 进入刷新状态
-        if ([headerLabel.text isEqualToString:kRefreshHeaderTitleRelease]) {
+        if ([headerLabel.text isEqualToString:_titleRelease]) {
             [self beginRefreshing];
         }
         
@@ -144,7 +156,7 @@
     if (!isRefresh) {
         
         isRefresh=YES;
-        headerLabel.text=kRefreshHeaderTitleLoading;
+        headerLabel.text=_titleLoading;
         headerIV.hidden=YES;
         activityView.hidden=NO;
         [activityView startAnimating];
@@ -179,7 +191,7 @@
             if (point.y!=0) {
                 _scrollView.contentOffset=CGPointMake(0, point.y+headerHeight*1.5);
             }
-            headerLabel.text=kRefreshHeaderTitlePullDown;
+            headerLabel.text=_titlePullDown;
             _scrollView.contentInset=UIEdgeInsetsMake(0, 0, 0, 0);
             headerIV.hidden=NO;
             headerIV.transform = CGAffineTransformMakeRotation(M_PI*2);
