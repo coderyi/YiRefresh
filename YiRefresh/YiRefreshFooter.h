@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^BeginRefreshingBlock)(void);
+
 @interface YiRefreshFooter : NSObject
 @property(nonatomic,strong) UIScrollView *scrollView;
 
@@ -20,7 +21,6 @@ typedef void (^BeginRefreshingBlock)(void);
  *  callback when refreshing
  */
 @property(nonatomic,copy) BeginRefreshingBlock beginRefreshingBlock;
-
 
 /**
  *  footer's init

@@ -11,20 +11,20 @@
 #import "TableViewController.h"
 #import "CollectionViewController.h"
 #import "WebViewController.h"
+
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
 #pragma mark - Lifecycle
-
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     if ([[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0) {
         self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;
-       
     }
     self.title=@"YiRefresh";
     self.view.backgroundColor=[UIColor whiteColor];
@@ -48,7 +48,6 @@
     buttonCollection.backgroundColor=[UIColor colorWithRed:0.00f green:0.38f blue:0.77f alpha:1.00f];
     buttonCollection.layer.cornerRadius=6;
 
-    
     // 按钮点击进入 webView刷新演示 页面
     UIButton *buttonWeb=[UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:buttonWeb];
@@ -58,29 +57,31 @@
     buttonWeb.backgroundColor=[UIColor colorWithRed:0.17 green:0.72 blue:0.67 alpha:1];
     buttonWeb.layer.cornerRadius=6;
     
-    
 }
-- (void)didReceiveMemoryWarning {
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark - Actions
 
--(void)tableAction{
+#pragma mark - Actions
+-(void)tableAction
+{
     TableViewController *table=[[TableViewController alloc] init];
     [self.navigationController pushViewController:table animated:YES];
-    
-}
--(void)collectionAction{
-    CollectionViewController *collection=[[CollectionViewController alloc] init];
-    [self.navigationController pushViewController:collection animated:YES];
-    
 }
 
--(void)webAction{
+-(void)collectionAction
+{
+    CollectionViewController *collection=[[CollectionViewController alloc] init];
+    [self.navigationController pushViewController:collection animated:YES];
+}
+
+-(void)webAction
+{
     WebViewController *web=[[WebViewController alloc] init];
     [self.navigationController pushViewController:web animated:YES];
-    
 }
 
 

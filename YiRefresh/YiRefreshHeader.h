@@ -18,7 +18,6 @@ typedef void (^BeginRefreshingBlock)(void);
 #define kRefreshHeaderTitlePullDown @"下拉可刷新"
 #define kRefreshHeaderTitleRelease @"松开以刷新"
 
-
 @interface YiRefreshHeader : NSObject
 @property(nonatomic,strong) UIScrollView *scrollView;
 
@@ -30,7 +29,6 @@ typedef void (^BeginRefreshingBlock)(void);
 @property(nonatomic,copy) NSString *titleLoading;// YiRefresh header loading title
 @property(nonatomic,copy) NSString *titlePullDown;//YiRefresh header pull down title
 @property(nonatomic,copy) NSString *titleRelease;//YiRefresh header release title
-
 
 /**
  *  header's init
@@ -46,7 +44,5 @@ typedef void (^BeginRefreshingBlock)(void);
  *  end refresh  
  */
 -(void)endRefreshing;
-
-
 
 @end

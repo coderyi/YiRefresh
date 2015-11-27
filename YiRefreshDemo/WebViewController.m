@@ -8,23 +8,22 @@
 
 #import "WebViewController.h"
 #import "YiRefreshHeader.h"
-@interface WebViewController ()<UIWebViewDelegate>{
-    
+@interface WebViewController ()<UIWebViewDelegate> {
     YiRefreshHeader *refreshHeader;
     UIWebView *webView;
-    
 }
 @end
+
 @implementation WebViewController
 
 #pragma mark - Lifecycle
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     if ([[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0) {
         self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;
-        
     }
     
     self.title=@"webView刷新演示";
@@ -35,9 +34,6 @@
     [self.view addSubview:webView];
     webView.delegate=self;
 
-    
-    
-    
     // YiRefreshHeader  头部刷新按钮的使用
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=webView.scrollView;
@@ -50,21 +46,21 @@
     
     [refreshHeader beginRefreshing];
     
-    
-    
 }
 
 #pragma mark - UIWebViewDelegate
 
-- (void)webViewDidStartLoad:(UIWebView *)webView{
-
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
 }
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
     [refreshHeader endRefreshing];
-
 }
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     [refreshHeader endRefreshing];
-
 }
+
 @end
