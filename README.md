@@ -25,7 +25,10 @@ header drop down to refresh
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=tableView;
     [refreshHeader header];
+    typeof(refreshHeader) __weak weakRefreshHeader = refreshHeader;
     refreshHeader.beginRefreshingBlock=^(){
+        typeof(weakRefreshHeader) __strong strongRefreshHeader = weakRefreshHeader;
+        [strongRefreshHeader endRefreshing];
     };
     [refreshHeader beginRefreshing];
     
@@ -34,7 +37,10 @@ footer pull up to refresh
     refreshFooter=[[YiRefreshFooter alloc] init];
     refreshFooter.scrollView=tableView;
     [refreshFooter footer];
+    typeof(refreshFooter) __weak weakRefreshFooter = refreshFooter;
     refreshFooter.beginRefreshingBlock=^(){
+        typeof(weakRefreshFooter) __strong strongRefreshFooter = weakRefreshFooter;
+        [strongRefreshFooter endRefreshing];
     };
     
 ![YiRefresh](http://7u2k5i.com1.z0.glb.clouddn.com/github_yirefreshtable.gif?imageMogr2/thumbnail/370x662!) 
