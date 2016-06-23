@@ -74,10 +74,10 @@
     [refreshHeader beginRefreshing];
     
     // YiRefreshFooter  底部刷新按钮的使用
-    typeof(refreshFooter) __weak weakRefreshFooter = refreshFooter;
     refreshFooter=[[YiRefreshFooter alloc] init];
     refreshFooter.scrollView=collectionView;
     [refreshFooter footer];
+    typeof(refreshFooter) __weak weakRefreshFooter = refreshFooter;
     refreshFooter.beginRefreshingBlock=^(){
         // 后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
