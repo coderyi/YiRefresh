@@ -9,15 +9,15 @@
 #import "TableViewController.h"
 #import "YiRefreshHeader.h"
 #import "YiRefreshFooter.h"
-@interface TableViewController ()<UITableViewDataSource> {
+@interface TableViewController ()<UITableViewDataSource>
+@property(nonatomic, strong) YiRefreshHeader *refreshHeader;
+@property(nonatomic, strong) YiRefreshFooter *refreshFooter;
+@property(nonatomic, assign) NSInteger total;
 
-    YiRefreshHeader *refreshHeader;
-    YiRefreshFooter *refreshFooter;
-    int total;
-}
 @end
 
 @implementation TableViewController
+@synthesize refreshHeader,refreshFooter,total;
 
 #pragma mark - Lifecycle
 - (void)viewDidLoad
@@ -41,17 +41,19 @@
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=tableView;
     [refreshHeader header];
-    typeof(refreshHeader) __weak weakRefreshHeader = refreshHeader;
+    
+    typeof(self) __weak weakSelf = self;
+
     refreshHeader.beginRefreshingBlock=^(){
         // 后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             sleep(2);
             dispatch_async(dispatch_get_main_queue(), ^{
-                typeof(weakRefreshHeader) __strong strongRefreshHeader = weakRefreshHeader;
+                typeof(weakSelf) __strong strongSelf = weakSelf;
                 // 主线程刷新视图
-                total=16;
+                strongSelf.total=16;
                 [tableView reloadData];
-                [strongRefreshHeader endRefreshing];
+                [strongSelf.refreshHeader endRefreshing];
             });
         });
     };
@@ -63,18 +65,17 @@
     refreshFooter=[[YiRefreshFooter alloc] init];
     refreshFooter.scrollView=tableView;
     [refreshFooter footer];
-    typeof(refreshFooter) __weak weakRefreshFooter = refreshFooter;
 
     refreshFooter.beginRefreshingBlock=^(){
         // 后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             sleep(2);
             dispatch_async(dispatch_get_main_queue(), ^{
-                typeof(weakRefreshFooter) __strong strongRefreshFooter = weakRefreshFooter;
+                typeof(weakSelf) __strong strongSelf = weakSelf;
                 // 主线程刷新视图
-                total=total+16;
+                strongSelf.total=strongSelf.total+16;
                 [tableView reloadData];
-                [strongRefreshFooter endRefreshing];
+                [strongSelf.refreshFooter endRefreshing];
             });
         });
     };

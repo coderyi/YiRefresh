@@ -11,17 +11,16 @@
 #import "YiRefreshHeader.h"
 #import "YiRefreshFooter.h"
 
-@interface CollectionViewController ()<UICollectionViewDataSource> {
-    
-    YiRefreshHeader *refreshHeader;
-    YiRefreshFooter *refreshFooter;
-    
-    int total;
-}
+@interface CollectionViewController ()<UICollectionViewDataSource>
+
+@property(nonatomic, strong) YiRefreshHeader *refreshHeader;
+@property(nonatomic, strong) YiRefreshFooter *refreshFooter;
+@property(nonatomic, assign) NSInteger total;
 
 @end
 
 @implementation CollectionViewController
+@synthesize refreshHeader,refreshFooter,total;
 
 #pragma mark - Lifecycle
 - (void)viewDidLoad
@@ -57,17 +56,21 @@
     refreshHeader=[[YiRefreshHeader alloc] init];
     refreshHeader.scrollView=collectionView;
     [refreshHeader header];
-    typeof(refreshHeader) __weak weakRefreshHeader = refreshHeader;
+
+    typeof(self) __weak weakSelf = self;
+
     refreshHeader.beginRefreshingBlock=^(){
         // 后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             sleep(2);
             dispatch_async(dispatch_get_main_queue(), ^{
-                typeof(weakRefreshHeader) __strong strongRefreshHeader = weakRefreshHeader;
+                typeof(weakSelf) __strong strongSelf = weakSelf;
+
                 // 主线程刷新视图
-                total=17;
+                
+                strongSelf.total=17;
                 [collectionView reloadData];
-                [strongRefreshHeader endRefreshing];
+                [strongSelf.refreshHeader endRefreshing];
             });
         });
     };
@@ -77,17 +80,17 @@
     refreshFooter=[[YiRefreshFooter alloc] init];
     refreshFooter.scrollView=collectionView;
     [refreshFooter footer];
-    typeof(refreshFooter) __weak weakRefreshFooter = refreshFooter;
+
     refreshFooter.beginRefreshingBlock=^(){
         // 后台执行：
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             sleep(2);
             dispatch_async(dispatch_get_main_queue(), ^{
-                typeof(weakRefreshFooter) __strong strongRefreshFooter = weakRefreshFooter;
+                typeof(weakSelf) __strong strongSelf = weakSelf;
+
                 // 主线程刷新视图
-//                total=total;
                 [collectionView reloadData];
-                [strongRefreshFooter endRefreshing];
+                [strongSelf.refreshFooter endRefreshing];
             });
         });
     };
