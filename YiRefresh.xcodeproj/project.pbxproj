@@ -14,7 +14,6 @@
 		0A5538021B3FE33E00E8457B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5537F21B3FE33E00E8457B /* Main.storyboard */; };
 		0A5538031B3FE33E00E8457B /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537F51B3FE33E00E8457B /* CollectionViewController.m */; };
 		0A5538041B3FE33E00E8457B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A5537F71B3FE33E00E8457B /* Images.xcassets */; };
-		0A5538051B3FE33E00E8457B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A5537F81B3FE33E00E8457B /* Info.plist */; };
 		0A5538061B3FE33E00E8457B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537F91B3FE33E00E8457B /* main.m */; };
 		0A5538071B3FE33E00E8457B /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537FB1B3FE33E00E8457B /* TableViewController.m */; };
 		0A5538081B3FE33E00E8457B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5537FD1B3FE33E00E8457B /* ViewController.m */; };
@@ -219,6 +218,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -238,7 +238,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5538051B3FE33E00E8457B /* Info.plist in Resources */,
 				0A5538041B3FE33E00E8457B /* Images.xcassets in Resources */,
 				0AF5DCD01B4C209A00DC739D /* down@2x.png in Resources */,
 				0A5538011B3FE33E00E8457B /* LaunchScreen.xib in Resources */,
